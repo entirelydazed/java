@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Automatic Background Color</title>
+            <style>
+                body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                padding-top: 100px;
+                transition: background-color 0.5s;
+                }
+            </style>
+    </head>
+    <body>
+        <h1>Automatic Background Color Changer</h1>
+        <p>The background changes every 5 seconds.</p>
+        <script>
+            const colors = [
+            "lightblue", "lightgreen", "lightyellow",
+            "lightpink", "lavender", "lightcoral"
+            ];
+            let index = 0;
+            function changeBackground() {
+            document.body.style.backgroundColor = colors[index];
+            index = (index + 1) % colors.length;
+            }
+            changeBackground();
+            setInterval(changeBackground, 5000);
+        </script>
+    </body>
+</html> 
